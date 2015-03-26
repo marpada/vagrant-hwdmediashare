@@ -27,6 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "joomla/", "/var/www/hwdmediashare"
   config.vm.synced_folder "logs/", "/var/log/apache2", :owner => 'root', :group => 'vagrant'
 
+  config.vm.provision :shell, :inline => "which chef-solo || wget -O - https://opscode.com/chef/install.sh | sudo bash"
   config.vm.provision :chef_zero do |chef|
     chef.json = {
       mysql: {
