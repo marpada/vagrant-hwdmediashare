@@ -38,7 +38,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           joomla_db_name: 'joomla',
           joomla_db_user: 'joomla',
           joomla_db_password: 'ChangeMe'
-        }
+        },
+        joomla_package_url: "http://joomlacode.org/gf/download/frsrelease/20021/162256/Joomla_3.4.1-Stable-Full_Package.tar.gz"
       }
     }
     chef.recipe_url = 'https://github.com/marpada/hwdmediashare-cookbook/releases/download/v0.1.1/hwdmediashare-cookbook-v0.1.1.tar.gz'
